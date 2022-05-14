@@ -3,7 +3,7 @@ In statistics, D'Agostino's K2 test, named for Ralph D'Agostino, is a goodness-o
 
 From Wikipedia, the free encyclopedia
 
-Para su uso en MS-DOS
+# Para su uso en MS-DOS
 
 abrir el simbolo del sistema y cambiarse al directorio donde se encuentra el archivo normal.exe y dat.csv y 
 dar la siguiete orden: #### normal < dat.csv
