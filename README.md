@@ -6,8 +6,24 @@ From Wikipedia, the free encyclopedia
 # Para su uso en MS-DOS
 
 abrir el simbolo del sistema y cambiarse al directorio donde se encuentra el archivo normal.exe y dat.csv y 
-dar la siguiete orden: 
+dar la siguiente orden: 
 #### normal < dat.csv
 
 ![image](https://user-images.githubusercontent.com/44904277/168402764-989aea3c-f4b4-42a2-9d79-81569c982f05.png)
+
+### dat.csv
+tiene la siguiente información
+
+2.4
+2.6
+2.7
+3.2
+3.2
+3.4
+3.4
+3.5
+3.5
+3.6
+![image](https://user-images.githubusercontent.com/44904277/168402918-e4c7e30b-3adf-454d-9a6b-b85f152b0d96.png)
+
 
