@@ -6,7 +6,8 @@ From Wikipedia, the free encyclopedia
 # Para su uso en MS-DOS
 
 abrir el simbolo del sistema y cambiarse al directorio donde se encuentra el archivo normal.exe y dat.csv y 
-dar la siguiete orden: #### normal < dat.csv
+dar la siguiete orden: 
+#### normal < dat.csv
 
 ![image](https://user-images.githubusercontent.com/44904277/168402764-989aea3c-f4b4-42a2-9d79-81569c982f05.png)
 
