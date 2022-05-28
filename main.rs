@@ -1,4 +1,7 @@
 use statrs::distribution::{ChiSquared, Continuous};
+
+use std::io;
+
 /*  Transcripción y ajuste a RUST por:
         Enrique R.P. Buendia Lozada
     Mayo 2022
@@ -10,15 +13,45 @@ use statrs::distribution::{ChiSquared, Continuous};
 
 */
 
-// Ejemplo de uso:
-fn main() {
-    let mut xs: Vec<f64> = vec![2.4, 2.6, 2.7, 3.2, 3.2, 3.4, 3.4, 3.5, 3.5, 3.6];
+//
+fn leer() {
+    //let mut xs: Vec<f64> = vec![2.4, 2.6, 2.7, 3.2, 3.2, 3.4, 3.4, 3.5, 3.5, 3.6];
 
+    let mut xs: Vec<f64> = Vec::new();
+
+    let mut rdr = csv::Reader::from_reader(io::stdin());
+    // Loop over each record.
+    for result in rdr.records() {
+        let record = result.expect("a CSV record");
+
+        xs.push(record[0].parse::<f64>().unwrap());
+    }
+    //println!(" {:?}", xs);
     dago_pear_k2(&mut xs);
 }
 
+fn main() {
+    println!("    ");
+    println!("  Control estadístico, BUAP México, ");
+    println!("  Mayo de 2022");
+    println!("  Autor:  Dr. Enrique R.P. Buendia Lozada  ");
+    println!("    ");
+    leer();
+}
+
+use std::cmp::Ordering;
+fn cmp_f64(a: &f64, b: &f64) -> Ordering {
+    if a < b {
+        return Ordering::Less;
+    } else if a > b {
+        return Ordering::Greater;
+    }
+    return Ordering::Equal;
+}
+
 pub fn dago_pear_k2(x: &mut Vec<f64>) -> bool {
-    x.sort_by(|a: &f64, b: &f64| a.partial_cmp(b).unwrap());
+    //x.sort_by(|a: &f64, b: &f64| a.partial_cmp(b).unwrap());
+    x.sort_by(cmp_f64);
     //print!("{:?}", x);
 
     let alpha: f64 = 0.05;
